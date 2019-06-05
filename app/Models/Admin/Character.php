@@ -4,7 +4,8 @@ namespace App\Models\Admin;
 
 use Illuminate\Database\Eloquent\Model;
 
-use App\Models\Admin\Acteur;
+use App\Models\Admin\Actor;
+use App\Models\Admin\Serie;
 
 class Character extends Model
 {
@@ -20,5 +21,12 @@ class Character extends Model
      */
     public function actor() {
         return $this->belongsTo(Actor::class);
+    }
+
+    /**
+     * Gets the serie the characters belongs to
+     */
+    public function serie() {
+        return $this->belongsTo(Serie::class);
     }
 }

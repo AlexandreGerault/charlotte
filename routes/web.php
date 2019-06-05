@@ -11,4 +11,6 @@
 |
 */
 
-Route::get('/{id}', 'SerieController@show');
+Route::get('/serie/{id}', 'SerieController@show');
+Route::get('/serie/{id}/actors', 'SerieController@showActors');
+Route::get('/serie/{id}/characters', 'SerieController@showCharacters');
